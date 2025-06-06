@@ -1,0 +1,41 @@
+.env
+# Laravel Backend
+
+/vendor/
+/node_modules/
+
+# Laravel environment file (contains secrets)
+.env
+.env.*.php
+
+# Laravel cache, logs, compiled files
+/storage/*.key
+/storage/*.log
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/bootstrap/cache/*.php
+
+# Ignore IDE/editor files
+.idea/
+/.vscode/
+/*.sublime-workspace
+/*.sublime-project
+
+# MacOS files
+.DS_Store
+
+# React Frontend
+
+/frontend/node_modules/
+/frontend/build/
+/frontend/dist/
+
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.*.local
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
