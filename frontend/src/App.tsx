@@ -1,7 +1,12 @@
-import React from "react";
+import { ThemeProvider } from "./context/ThemeContext";
+import Home from "./pages/Dashboard/Home";
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <ThemeProvider>
+      <Home />
+    </ThemeProvider>
+  );
 };
 
 export default App;
