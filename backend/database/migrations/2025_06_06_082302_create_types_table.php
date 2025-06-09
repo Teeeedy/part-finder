@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('types', function (Blueprint $table) {
             $table->increments('type_id');
             $table->string('type_name', 100)->unique();
-            $table->text('description')->nullable();
             $table->timestamp('created_at')->useCurrent();
         });
     }
