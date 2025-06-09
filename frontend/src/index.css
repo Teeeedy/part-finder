@@ -112,12 +112,37 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+html,
+body,
+html[style*="padding-right"],
+body[style*="padding-right"] {
+  padding-right: 0 !important;
+}
+
+html[style*="overflow: hidden"],
+body[style*="overflow: hidden"] {
+  overflow: auto !important;
+}
+
+/* Tailwind base layer overrides */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply !bg-background !text-foreground;
     font-family: "Inter", "Poppins", ui-sans-serif, system-ui;
+    overflow-x: hidden !important;
+    padding-right: 0 !important;
+  }
+
+  body[data-scroll-locked] {
+    margin-right: 0px !important;
   }
 }

@@ -7,14 +7,12 @@ const axiosInstance = axios.create({
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
+    Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`,
   },
 });
 
-// Response Interceptor
-axiosClient.interceptors.response.use(
-  (response) => {
-    return response;
-  },
+axiosInstance.interceptors.response.use(
+  (response) => response,
   (error) => {
     const { response } = error;
     throw error;
