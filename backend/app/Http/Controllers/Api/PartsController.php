@@ -46,7 +46,7 @@ class PartsController extends Controller
         $modelId = $request->query('model_id');
         $typeId = $request->query('type_id');
 
-        $parts = Part::byHierarchy($makeId, $modelId, $typeId)->get();
+        $parts = Part::SearchbyHierarchy($makeId, $modelId, $typeId)->get();
 
         return response()->json($parts);
     }

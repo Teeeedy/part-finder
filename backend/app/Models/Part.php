@@ -31,7 +31,7 @@ class Part extends Model
     }
 
     // Search By Hierarchy depending on search filters
-    public function SearchByHierarchy($query, $makeId = null, $modelId = null, $typeId = null)
+    public function scopeSearchByHierarchy($query, $makeId = null, $modelId = null, $typeId = null)
     {
         if ($makeId) {
             $query->where('make_id', $makeId);
