@@ -197,7 +197,7 @@ const SearchTool = () => {
               <Search size={25} strokeWidth={3} />
             </CardTitle>
           </CardHeader>
-          <CardContent className="flex flex-col w-full md:flex-row justify-center items-center gap-10">
+          <CardContent className="flex flex-col w-full md:flex-row justify-center items-center gap-5 md:gap-10">
             {/* Make Selector */}
             <Select
               value={selectedMake?.make_id.toString() || ""}

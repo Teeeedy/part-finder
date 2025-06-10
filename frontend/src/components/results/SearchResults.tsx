@@ -33,6 +33,7 @@ const SearchResults: React.FC<SearchResultsProps> = ({
 
   return (
     <div className="mt-6 w-full max-w-4xl mx-auto space-y-4">
+      <h2 className="text-2xl font-semibold mb-4">Search Results</h2>
       {results.map((result) => (
         <Card
           className="shadow-md dark:shadow-[0_0_10px_rgba(255,255,255,0.1)]"
