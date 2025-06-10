@@ -39,12 +39,17 @@ class PartsController extends Controller
     }
 
     // GET /api/parts?make_id=&model_id=&type_id=
+    // Extra feature if you were to use pagination: // GET /api/parts?make_id=&model_id=&type_id=&page=1
     // Return all available parts from {make} {model} and {type}
     public function getParts(Request $request)
     {
         $makeId = $request->query('make_id');
         $modelId = $request->query('model_id');
         $typeId = $request->query('type_id');
+
+        // Future Implementation 
+        // $parts = Part::SearchbyHierarchy($makeId, $modelId, $typeId)->paginate(10);
+        // It will return parts links and meta which should be used on the frontend to implement pagination
 
         $parts = Part::SearchbyHierarchy($makeId, $modelId, $typeId)->get();
 

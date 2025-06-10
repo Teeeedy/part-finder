@@ -9,7 +9,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::controller(PartsController::class)
-    ->middleware('auth:sanctum')
+    ->middleware('auth:sanctum', 'throttle:60,1')
     ->group(function () {
         Route::get('/makes', 'getMakes');
         Route::get('/makes/{makeId}/models', 'getModels');
